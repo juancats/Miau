@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Miau: galería de gatos con tarjetas que giran para mostrar autor, fecha y un mensaje.">
+    <title>Miau</title>
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="images/favicon_huellita.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <header class="header" id="header">
+        <div class="wrap header__inner">
+            <a href="#top" class="header__logo" aria-label="Miau, ir al inicio">
+                <h1 class="header__title">Miau</h1>
+                <img class="img__logo" src="images/huella_vectorizada.svg" alt="Logo de la galería">
+            </a>
+            <button class="btn" id="flipAll" type="button" aria-pressed="false">Voltear todas</button>
+        </div>
+    </header>
+
+    <main class="main" id="main">
+        <div class="container">
+            <section class="cards" aria-label="Galería de gatos">
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Cristantemo</h2></div>
+                            <div class="img__container">
+                                <img title="Cristantemo" class="card__img" src="images/jennifer_c.jpg" alt="Gatito crema jugando con una pluma junto a la ventana" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Siamés Crema</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Cristantemo" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Cristantemo</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>Jennifer C.</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“Con la pluma a tiro, la tarde se vuelve una cacería épica.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Alamanda</h2></div>
+                            <div class="img__container">
+                                <img title="Alamanda" class="card__img" src="images/alvegaspar.jpg" alt="Gata calicó durmiendo con la pata sobre la cara" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Calicó</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Alamanda" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Alamanda</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>Joaquim Gaspar</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“Dormir es un arte, y ella es maestra: ni un bigote se mueve.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Alfonso y Geranio</h2></div>
+                            <div class="img__container">
+                                <img title="Alfonso y Geranio" class="card__img" src="images/mag_aloche.JPG" alt="Una gata calicó y un gato tuxedo jugando sobre un palé" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Calicó y Tuxedo</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Alfonso y Geranio" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Alfonso y Geranio</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>Mag Aloche</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“Un duelo de patitas: nadie gana y todos se divierten.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Camelia</h2></div>
+                            <div class="img__container">
+                                <img title="Camelia" class="card__img" src="images/Francis_Helminski.jpg" alt="Gato tuxedo de ojos verdes dentro de un cochecito para mascotas" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Tuxedo</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Camelia" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Camelia</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>Francis Helminski</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“De paseo en su carruaje: las vistas, siempre tras la malla.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Loto</h2></div>
+                            <div class="img__container">
+                                <img title="Loto" class="card__img" src="images/julian_monge-naajera.jpg" alt="Gato tuxedo oliendo un reno de paja junto a la ventana" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Tuxedo</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Loto" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Loto</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>Julián Monge-Nájera</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“Admirando al reno de paja como a su mejor amigo.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Pasionaria</h2></div>
+                            <div class="img__container">
+                                <img title="Pasionaria" class="card__img" src="images/keith_kissel.jpg" alt="Gato blanco con un ojo amarillo y otro azul" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Blanco con heterocromía</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Pasionaria" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Pasionaria</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>Keith Kissel</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“Un ojo de ámbar y otro de cielo: mira el mundo en dos tonos.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Alhelí</h2></div>
+                            <div class="img__container">
+                                <img title="Alhelí" class="card__img" src="images/sandrasingh.jpg" alt="Gato naranja atigrado maullando de frente" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Atigrado Naranja</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Alhelí" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Alhelí</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>Sandra Singh</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“Tiene mucho que contar y lo cuenta ahora mismo.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Gregorio y Dafne</h2></div>
+                            <div class="img__container">
+                                <img title="Gregorio y Dafne" class="card__img" src="images/malen_thyssen.jpg" alt="Gato atigrado y gato negro juntos sobre el césped de noche" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Atigrado y Negro</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Gregorio y Dafne" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Gregorio y Dafne</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>Malen Thyssen</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“Un abrazo nocturno sobre el pasto, de esos que no necesitan palabras.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Dicentra</h2></div>
+                            <div class="img__container">
+                                <img title="Dicentra" class="card__img" src="images/ozonesn.JPG" alt="Gata blanca con manchas atigradas comiendo" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Mestizo, manchas atigradas</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Dicentra" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Dicentra</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>OzoneSN</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“Cena sin ceremonias: el instinto de cazadora sigue intacto.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__inner">
+                        <!-- FRENTE -->
+                        <div class="card__face card__front">
+                            <div class="title__container"><h2 class="card__title" title="Nombre">Silene</h2></div>
+                            <div class="img__container">
+                                <img title="Silene" class="card__img" src="images/james_st-john.jpg" alt="Gatito naranja atigrado recostado mirando a la cámara" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card__footer">
+                                <p title="Raza" class="race">Atigrado Naranja</p>
+                                <button class="flip-btn" type="button" aria-label="Girar tarjeta de Silene" title="Ver detalles">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card__face card__back">
+                            <h2 class="back__title">Silene</h2>
+                            <dl class="back__data">
+                                <div><dt>Autor</dt><dd>James St. John</dd></div>
+                                <div><dt>Fecha</dt><dd><time>Por confirmar</time></dd></div>
+                            </dl>
+                            <p class="back__msg">“Mirada de luz y orgullo: la reina de la repisa.”</p>
+                            <button class="flip-btn flip-btn--text" type="button">Volver</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <button class="to-top" id="toTop" type="button" aria-label="Volver arriba">↑</button>
+
+    <footer class="footer" id="footer">
+        <div class="wrap">
+            <p class="footer__text">© 2067 Miau by JC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
